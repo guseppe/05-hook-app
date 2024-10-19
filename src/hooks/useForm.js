@@ -6,9 +6,13 @@ export const useForm = (initialForm = {}) => {
        const {value, name} = event.target;
        setFormState({...formState, [name]: value}) 
      }
+     const onResetForm = () =>{
+       setFormState(initialForm);
+     }
      return {
 
         ...formState,
-        onInputChange
+        onInputChange,
+        onResetForm
      }
 }

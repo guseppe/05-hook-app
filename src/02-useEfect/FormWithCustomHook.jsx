@@ -7,7 +7,7 @@ export const FormWithCustomHook = () => {
     email: '',
     password: ''
   }
-  const {onInputChange, username, email, password } = useForm(formFields)
+  const {onInputChange, onResetForm, username, email, password } = useForm(formFields)
  
   useEffect(()=>{
     //console.log('email changed');
@@ -40,7 +40,7 @@ export const FormWithCustomHook = () => {
             value={ password }
             onChange={ onInputChange }
         ></input>
-
+        <button onClick={onResetForm} className="btn btn-primary mt-2">Borrar</button>
     </>
   )
 }
