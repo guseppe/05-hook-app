@@ -2,9 +2,11 @@
 import { Routes, Route, Navigate} from 'react-router-dom';
 import { LoginPage, HomePage, AboutPage } from './';
 import { Navbar } from './Navbar';
+import { UserProvider } from './context/UserProvider';
+
 export const Main = () => {
   return (
-    <> 
+    <UserProvider> 
         <h1>MainApp</h1>
         <Navbar/>
         <hr/>
@@ -15,6 +17,6 @@ export const Main = () => {
             {/* <Route path="/*" element={<LoginPage/>}/> */}
             <Route path="/*" element={<Navigate to="/"/>}/>
         </Routes>
-    </>
+    </UserProvider>
   )
 }
