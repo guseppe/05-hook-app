@@ -6,6 +6,7 @@ export const TodoItem = ({todo, handleDelete, handleToggleTodo}) => {
           <span 
             className={`align-self-center ${todo.done ? 'text-decoration-line-through': ''}`}
             onClick={()=>handleToggleTodo(todo)}
+            aria-label="span"
           >
             {todo.description}
           </span>
